@@ -1,0 +1,513 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../assests/1655445752-technocrats-institute-of-technology-tit-bhopal-bhopal.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative
+    ;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+nav img{
+    width: 80px;
+    height: 80px;
+    padding-top: 1px;
+    
+
+}
+.nav-links{
+    flex: -3;
+    text-align: right;
+}
+.nav-links ul li{
+   list-style: none;
+   display: inline-block;
+   padding: 5px 8px;
+   position: relative;
+   font-size: 50px;
+}
+.nav-links ul li a{
+    color: rgb(233, 223, 223);
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+.nav-links ul li ::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    transition: 0.5s;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    
+}
+.nav-links ul li :hover::after{
+   width: 100%;
+}
+ 
+.text-box{
+    width: 90%;
+    color: rgb(17, 16, 17);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    text-shadow:5px 8px rgb(19, 18, 18);
+    color: rgb(250, 249, 250);
+}
+.text-box p{
+    margin: 50px 0 80px;
+    margin-top: 100px;
+    font-weight: 568;
+    font-size: 16px;
+    color: rgb(7, 7, 7);
+    
+    
+    text-shadow: 2px 2px rgb(248, 248, 250);
+    
+    
+    
+
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav.fa {
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        transition: 1s;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav.fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/*-------------------course------------------*/
+.course{
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size:26px ;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #e6cccc;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+.course-col:hover{
+    color: #f44336;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+h3{
+    text-align: center;
+    font-weight: 900;
+    margin: 10px 0;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*-------------------Campus---------------------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.campus-col img{
+    width: 100%;
+    margin:10px;
+    border-radius: 20px 20px ;
+    display: block;
+    
+}
+
+.layer{
+     background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    
+
+}
+.layer:hover{
+    background:rgba(226,0,0,0.7); 
+    width: 100%;
+    
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: rgb(252, 252, 254);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*-----------------------facilties----------------------*/
+
+.facilities{
+     width: 80%;
+     margin: auto;
+     text-align: center;
+     padding-top:100px ;
+
+}
+    
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 30px;
+
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+/*-----------------------testimonials---------------------*/
+
+.testimonials{
+width: 80%;
+margin: auto;
+padding-top: 100px;
+text-align: center;
+
+
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+
+}
+
+.testimonials-col p{
+    padding: 0;
+
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonials-col h5{
+ text-align: left;
+ margin-top: 16px;
+}
+.testimonials-col .fa{
+    color: #f44336;
+}
+@media(max-width:700px){
+    .testimonials-col img{
+        
+        margin-left: 0px;
+        margin-right: 15px;
+        
+    
+    }
+}
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../assests/comp-img.jpg);
+   background-position: center;
+   background-size: cover;
+   border-radius: 10px;
+   text-align: center;
+   padding: 100px 0;
+
+}
+
+.cta h1{
+    color: wheat;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width:700px){
+   .cta h1{
+    font-size: 24px;
+    
+}
+
+}
+
+/*---------------------footer----------------*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+
+/*-----------------------about us page--------------------*/
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../assests/about2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #e6cccc;
+}
+
+.sub-header h1{
+ margin-top: 100px;
+}
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+   width: 100%;
+}
+
+.about-col h1{
+  padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+.red-btn:hover{
+   color: #e6cccc;
+}
+
+.about-me{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.about-me-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.about-me-col img{
+    width: 100%;
+    margin:10px;
+    border-radius: 20px 20px ;
+    display: block;
+    
+}
+
+.layer-5{
+     background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    
+
+}
+.layer-5:hover{
+    background:rgba(226,0,0,0.7); 
+    width: 100%;
+    
+}
+.layer-5 h3{
+    width: 100%;
+    font-weight: 500;
+    color: rgb(252, 252, 254);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer-5:hover h3{
+    bottom: 14%;
+    opacity: 1;
+}
+
+/*--------------------------footer icons-----------------------------*/
+#client-section{
+    position: relative;
+    height: 544px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    
+    height: 54%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 124px;
+}
+
+
+/*-----------------------contact us page----------------------------*/
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
